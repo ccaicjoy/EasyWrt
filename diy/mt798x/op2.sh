@@ -39,10 +39,10 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/M
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-nginx/Makefile
 
 ##更改主机名
-sed -i "s/hostname='.*'/hostname='EasyWrt'/g" package/base-files/files/bin/config_generate
+sed -i "s/hostname='.*'/hostname='Rax3000M'/g" package/base-files/files/bin/config_generate
 
 ##加入作者信息
-sed -i "s/DISTRIB_DESCRIPTION='*.*'/DISTRIB_DESCRIPTION='EasyWrt-$(date +%Y%m%d)'/g"  package/base-files/files/etc/openwrt_release
+sed -i "s/DISTRIB_DESCRIPTION='*.*'/DISTRIB_DESCRIPTION='Opwrt-$(date +%Y%m%d)'/g"  package/base-files/files/etc/openwrt_release
 sed -i "s/DISTRIB_REVISION='*.*'/DISTRIB_REVISION=' By DaoDao'/g" package/base-files/files/etc/openwrt_release
 cp -af feeds/extraipk/patch/diy/banner-easy  package/base-files/files/etc/banner
 
@@ -51,15 +51,15 @@ sed -i "3iuci commit istore" package/emortal/default-settings/files/99-default-s
 
 
 ##WiFi
-sed -i "s/MT7986_AX6000_2.4G/EasyWrt-2.4G/g" package/mtk/drivers/wifi-profile/files/mt7986/mt7986-ax6000.dbdc.b0.dat
-sed -i "s/MT7986_AX6000_5G/EasyWrt-5G/g" package/mtk/drivers/wifi-profile/files/mt7986/mt7986-ax6000.dbdc.b1.dat
+sed -i "s/MT7986_AX6000_2.4G/Opwrt-2.4G/g" package/mtk/drivers/wifi-profile/files/mt7986/mt7986-ax6000.dbdc.b0.dat
+sed -i "s/MT7986_AX6000_5G/Opwrt-5G/g" package/mtk/drivers/wifi-profile/files/mt7986/mt7986-ax6000.dbdc.b1.dat
 
-sed -i "s/MT7981_AX3000_2.4G/EasyWrt-2.4G/g" package/mtk/drivers/wifi-profile/files/mt7981/mt7981.dbdc.b0.dat
-sed -i "s/MT7981_AX3000_5G/EasyWrt-5G/g" package/mtk/drivers/wifi-profile/files/mt7981/mt7981.dbdc.b1.dat
+sed -i "s/MT7981_AX3000_2.4G/Opwrt-2.4G/g" package/mtk/drivers/wifi-profile/files/mt7981/mt7981.dbdc.b0.dat
+sed -i "s/MT7981_AX3000_5G/Opwrt-5G/g" package/mtk/drivers/wifi-profile/files/mt7981/mt7981.dbdc.b1.dat
 
 ##New WiFi
-sed -i "s/ImmortalWrt-2.4G/EasyWrt-2.4G/g" package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
-sed -i "s/ImmortalWrt-5G/EasyWrt-5G/g" package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
+sed -i "s/ImmortalWrt-2.4G/Opwrt-2.4G/g" package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
+sed -i "s/ImmortalWrt-5G/Opwrt-5G/g" package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
 
 
 ##FQ全部调到VPN菜单
